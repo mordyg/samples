@@ -13,6 +13,8 @@ scanButton.addEventListener("click", async () => {
     ndef.addEventListener("reading", ({ message, serialNumber }) => {
       log(`> Serial Number: ${serialNumber}`);
       log(`> Records: (${message.records.length})`);
+      log(`> Records: (${JSON.stringify(message.records)})`);
+
     });
   } catch (error) {
     log("Argh! " + error);
